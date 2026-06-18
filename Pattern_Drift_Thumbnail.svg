@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Dark gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+
+    <!-- Accent glow for drift line -->
+    <linearGradient id="driftLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2"/>
+      <stop offset="55%" style="stop-color:#3b82f6;stop-opacity:0.9"/>
+      <stop offset="75%" style="stop-color:#f97316;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0.8"/>
+    </linearGradient>
+
+    <!-- Glow filter for the alert pulse -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Pipeline stage gradient -->
+    <linearGradient id="stageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2d3d"/>
+      <stop offset="100%" style="stop-color:#0d1b2a"/>
+    </linearGradient>
+
+    <linearGradient id="driftBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e2837" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="450" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Subtle top accent line -->
+  <rect x="0" y="0" width="800" height="2" fill="url(#driftLine)"/>
+
+  <!-- ─── TITLE BLOCK ─── -->
+  <text x="38" y="54" font-family="'Courier New', monospace" font-size="11" fill="#3b82f6" letter-spacing="3" opacity="0.8">PYTHON · MIT · v0.1.0 · STDLIB ONLY</text>
+  <text x="36" y="100" font-family="'Courier New', monospace" font-size="46" font-weight="bold" fill="#e6edf3" letter-spacing="-1">pattern</text>
+  <text x="36" y="146" font-family="'Courier New', monospace" font-size="46" font-weight="bold" fill="url(#driftBadge)" letter-spacing="-1">drift</text>
+  <text x="36" y="178" font-family="'Courier New', monospace" font-size="13" fill="#8b949e" letter-spacing="0.5">Automatic concept drift detection</text>
+  <text x="36" y="196" font-family="'Courier New', monospace" font-size="13" fill="#8b949e" letter-spacing="0.5">for streaming ML datasets</text>
+
+  <!-- Algorithm pills -->
+  <rect x="36" y="214" width="58" height="20" rx="4" fill="#1c2d3e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="65" y="228" font-family="'Courier New', monospace" font-size="10" fill="#3b82f6" text-anchor="middle">ADWIN</text>
+
+  <rect x="102" y="214" width="78" height="20" rx="4" fill="#1c2d3e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="141" y="228" font-family="'Courier New', monospace" font-size="10" fill="#3b82f6" text-anchor="middle">PageHinkley</text>
+
+  <rect x="188" y="214" width="52" height="20" rx="4" fill="#1c2d3e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="214" y="228" font-family="'Courier New', monospace" font-size="10" fill="#3b82f6" text-anchor="middle">KSWIN</text>
+
+  <rect x="248" y="214" width="40" height="20" rx="4" fill="#1c2d3e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="268" y="228" font-family="'Courier New', monospace" font-size="10" fill="#3b82f6" text-anchor="middle">DDM</text>
+
+  <!-- ─── DRIFT SCORE CHART (top right) ─── -->
+  <!-- Chart container -->
+  <rect x="330" y="28" width="438" height="180" rx="8" fill="#0d1520" stroke="#21262d" stroke-width="1"/>
+  <text x="349" y="50" font-family="'Courier New', monospace" font-size="10" fill="#8b949e" letter-spacing="1">DRIFT SCORE TIMELINE</text>
+
+  <!-- Y-axis labels -->
+  <text x="345" y="68" font-family="'Courier New', monospace" font-size="8" fill="#3b3f44" text-anchor="end">1.0</text>
+  <text x="345" y="108" font-family="'Courier New', monospace" font-size="8" fill="#3b3f44" text-anchor="end">0.5</text>
+  <text x="345" y="148" font-family="'Courier New', monospace" font-size="8" fill="#3b3f44" text-anchor="end">0.0</text>
+
+  <!-- Grid lines -->
+  <line x1="350" y1="67" x2="755" y2="67" stroke="#1e2837" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="350" y1="107" x2="755" y2="107" stroke="#1e2837" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="350" y1="147" x2="755" y2="147" stroke="#1e2837" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Sensitivity threshold line -->
+  <line x1="350" y1="135" x2="755" y2="135" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="757" y="138" font-family="'Courier New', monospace" font-size="7" fill="#ef4444" opacity="0.7">δ</text>
+
+  <!-- Feature 1 — stable then drifts (blue) -->
+  <polyline points="350,145 370,143 390,144 410,142 430,143 450,141 470,139 490,136 510,132 530,122 550,108 565,88 575,70 585,68 600,72 615,80 630,90 650,100 670,108 690,115 710,120 730,125 750,128"
+    fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Feature 2 — gradual drift (purple) -->
+  <polyline points="350,144 380,143 410,142 440,139 470,135 500,129 530,120 560,109 585,98 610,89 635,82 660,78 685,76 710,77 730,78 750,80"
+    fill="none" stroke="#a855f7" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Feature 3 — stable (green) -->
+  <polyline points="350,146 400,145 450,146 500,145 550,146 600,145 650,146 700,145 750,146"
+    fill="none" stroke="#22c55e" stroke-width="1" opacity="0.5"/>
+
+  <!-- Drift event vertical marker -->
+  <line x1="565" y1="57" x2="565" y2="147" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" opacity="0.8"/>
+  <rect x="552" y="53" width="55" height="14" rx="3" fill="url(#driftBadge)" filter="url(#glow)" opacity="0.9"/>
+  <text x="579" y="63" font-family="'Courier New', monospace" font-size="8" fill="white" text-anchor="middle" font-weight="bold">DRIFT!</text>
+
+  <!-- Legend -->
+  <line x1="352" y1="170" x2="368" y2="170" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="372" y="173" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">feature_1</text>
+  <line x1="420" y1="170" x2="436" y2="170" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="440" y="173" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">feature_2</text>
+  <line x1="492" y1="170" x2="508" y2="170" stroke="#22c55e" stroke-width="1"/>
+  <text x="512" y="173" font-family="'Courier New', monospace" font-size="8" fill="#8b949e">feature_3 (stable)</text>
+
+  <!-- ─── 5-STAGE PIPELINE (bottom) ─── -->
+  <text x="36" y="274" font-family="'Courier New', monospace" font-size="10" fill="#8b949e" letter-spacing="2">5-STAGE DETECTION PIPELINE</text>
+
+  <!-- Stage boxes -->
+  <!-- 1: Feature Extractor -->
+  <rect x="36" y="284" width="128" height="62" rx="6" fill="url(#stageGrad)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="100" y="302" font-family="'Courier New', monospace" font-size="9" fill="#3b82f6" text-anchor="middle" font-weight="bold">① EXTRACTOR</text>
+  <text x="100" y="317" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">dict / Series</text>
+  <text x="100" y="330" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">DataFrame</text>
+  <text x="100" y="343" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">→ {feat: float}</text>
+
+  <!-- Arrow -->
+  <polyline points="164,315 178,315" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="164" y1="315" x2="180" y2="315" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="178,311 185,315 178,319" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- 2: Detector Pool -->
+  <rect x="188" y="284" width="128" height="62" rx="6" fill="url(#stageGrad)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="252" y="302" font-family="'Courier New', monospace" font-size="9" fill="#3b82f6" text-anchor="middle" font-weight="bold">② DETECTORS</text>
+  <text x="252" y="317" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">ADWIN · PH</text>
+  <text x="252" y="330" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">KSWIN · DDM</text>
+  <text x="252" y="343" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">per-feature</text>
+
+  <!-- Arrow -->
+  <line x1="316" y1="315" x2="332" y2="315" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="330,311 337,315 330,319" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- 3: Classifier -->
+  <rect x="340" y="284" width="128" height="62" rx="6" fill="url(#stageGrad)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="404" y="302" font-family="'Courier New', monospace" font-size="9" fill="#a855f7" text-anchor="middle" font-weight="bold">③ CLASSIFIER</text>
+  <text x="404" y="317" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">sudden</text>
+  <text x="404" y="330" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">gradual · incremental</text>
+  <text x="404" y="343" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">recurring</text>
+
+  <!-- Arrow -->
+  <line x1="468" y1="315" x2="484" y2="315" stroke="#a855f7" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="482,311 489,315 482,319" fill="#a855f7" opacity="0.7"/>
+
+  <!-- 4: Window Engine -->
+  <rect x="492" y="284" width="128" height="62" rx="6" fill="url(#stageGrad)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="556" y="302" font-family="'Courier New', monospace" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="bold">④ WINDOW</text>
+  <text x="556" y="317" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">stable region</text>
+  <text x="556" y="330" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">retrain range</text>
+  <text x="556" y="343" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">confidence score</text>
+
+  <!-- Arrow -->
+  <line x1="620" y1="315" x2="636" y2="315" stroke="#22c55e" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="634,311 641,315 634,319" fill="#22c55e" opacity="0.7"/>
+
+  <!-- 5: Dispatcher -->
+  <rect x="644" y="284" width="128" height="62" rx="6" fill="url(#stageGrad)" stroke="#f97316" stroke-width="1.2" filter="url(#softGlow)" opacity="0.95"/>
+  <text x="708" y="302" font-family="'Courier New', monospace" font-size="9" fill="#f97316" text-anchor="middle" font-weight="bold">⑤ DISPATCHER</text>
+  <text x="708" y="317" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">Slack · webhook</text>
+  <text x="708" y="330" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">log · custom</text>
+  <text x="708" y="343" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">callbacks</text>
+
+  <!-- ─── DRIFT TYPES ROW ─── -->
+  <!-- sudden -->
+  <rect x="36" y="368" width="82" height="22" rx="4" fill="#1a1a2e" stroke="#ef4444" stroke-width="1"/>
+  <circle cx="51" cy="379" r="4" fill="#ef4444"/>
+  <text x="60" y="383" font-family="'Courier New', monospace" font-size="9" fill="#ef4444">sudden</text>
+
+  <!-- gradual -->
+  <rect x="126" y="368" width="82" height="22" rx="4" fill="#1a2e1a" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="141" cy="379" r="4" fill="#22c55e"/>
+  <text x="150" y="383" font-family="'Courier New', monospace" font-size="9" fill="#22c55e">gradual</text>
+
+  <!-- incremental -->
+  <rect x="216" y="368" width="96" height="22" rx="4" fill="#1e1a2e" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="231" cy="379" r="4" fill="#a855f7"/>
+  <text x="240" y="383" font-family="'Courier New', monospace" font-size="9" fill="#a855f7">incremental</text>
+
+  <!-- recurring -->
+  <rect x="320" y="368" width="82" height="22" rx="4" fill="#2e1e1a" stroke="#f97316" stroke-width="1"/>
+  <circle cx="335" cy="379" r="4" fill="#f97316"/>
+  <text x="344" y="383" font-family="'Courier New', monospace" font-size="9" fill="#f97316">recurring</text>
+
+  <!-- ─── RIGHT SIDE — DriftResult code block ─── -->
+  <rect x="430" y="358" width="342" height="82" rx="6" fill="#0d1520" stroke="#21262d" stroke-width="1"/>
+  <text x="446" y="374" font-family="'Courier New', monospace" font-size="9" fill="#6e7681"># DriftResult</text>
+  <text x="446" y="389" font-family="'Courier New', monospace" font-size="9" fill="#e6edf3">result<tspan fill="#f97316">.</tspan><tspan fill="#3b82f6">drift_detected</tspan>  <tspan fill="#22c55e">True</tspan></text>
+  <text x="446" y="403" font-family="'Courier New', monospace" font-size="9" fill="#e6edf3">result<tspan fill="#f97316">.</tspan><tspan fill="#3b82f6">drift_type</tspan>      <tspan fill="#a855f7">"sudden"</tspan></text>
+  <text x="446" y="417" font-family="'Courier New', monospace" font-size="9" fill="#e6edf3">result<tspan fill="#f97316">.</tspan><tspan fill="#3b82f6">drift_score</tspan>     <tspan fill="#f97316">0.8421</tspan></text>
+  <text x="446" y="431" font-family="'Courier New', monospace" font-size="9" fill="#e6edf3">result<tspan fill="#f97316">.</tspan><tspan fill="#3b82f6">retraining_window</tspan> <tspan fill="#6e7681">→ [450, 562]</tspan></text>
+
+  <!-- Bottom border accent -->
+  <rect x="0" y="448" width="800" height="2" fill="url(#driftLine)"/>
+</svg>

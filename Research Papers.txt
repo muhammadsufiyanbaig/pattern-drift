@@ -1,0 +1,68 @@
+Research Papers:
+
+ADWIN (Adaptive Windowing)
+
+Original Paper — Bifet & Gavaldà (2007)
+Learning from Time-Changing Data with Adaptive Windowing
+https://www.researchgate.net/publication/220907178_Learning_from_Time-Changing_Data_with_Adaptive_Windowing
+
+Parallel ADWIN (scalability improvements) — Grulich et al. (2018)
+Scalable Detection of Concept Drifts on Data Streams with Parallel Adaptive Windowing
+https://www.dfki.de/fileadmin/user_upload/import/9720_grulich-Scalable-Detection-of-Concept-Drifts-on-Data-Streams-with-Parallel-Adaptive-Windowing.pdf
+
+ADWIN++ (memory-optimized variant) — Optimizing ADWIN for Steady Streams, ACM SAC 2022
+https://dl.acm.org/doi/10.1145/3477314.3507074
+
+
+Page-Hinkley
+
+Original Paper — E.S. Page (1954)
+Continuous Inspection Schemes
+Biometrika 41(1/2):100–115
+(Classic paper — accessible via JSTOR or university library)
+
+Applied to concept drift — Sebastião & Fernandes (2017)
+Supporting the Page-Hinkley Test with Empirical Mode Decomposition for Change Detection
+https://www.researchgate.net/publication/318181504_Supporting_the_Page-Hinkley_Test_with_Empirical_Mode_Decomposition_for_Change_Detection
+
+Survey placing PH in context — Francis & Ali (2025)
+Identifying and Managing Concept Drift Through Page-Hinkley Test
+https://link.springer.com/chapter/10.1007/978-981-97-8946-7_3
+
+
+KSWIN (Kolmogorov-Smirnov Windowed)
+
+Original Paper — Raab, Heusinger & Schleif (2020)
+Reactive Soft Prototype Computing for Concept Drift Streams
+Neurocomputing 416:340–351
+https://arxiv.org/pdf/2007.05432
+
+Applied to high-dimensional process drift
+A Method to Benchmark High-Dimensional Process Drift Detection, Springer 2025
+https://link.springer.com/article/10.1007/s10845-025-02590-9
+
+
+DDM (Drift Detection Method)
+
+Original Paper — Gama, Medas, Castillo & Rodrigues (2004)
+Learning with Drift Detection
+SBIA 2004
+https://www.researchgate.net/publication/220974771_Learning_with_Drift_Detection
+Semantic Scholar entry:
+https://www.semanticscholar.org/paper/Learning-with-Drift-Detection-Gama-Medas/3cb54f04765c19e7e0580196c29c64e49f63a744
+
+EDDM (extends DDM for gradual drift) — Baena-García et al. (2006)
+Early Drift Detection Method
+https://www.researchgate.net/publication/245999704_Early_Drift_Detection_Method
+
+RDDM (reactive extension of DDM) — Barros et al. (2017)
+RDDM: Reactive Drift Detection Method
+https://www.researchgate.net/publication/319166247_RDDM_Reactive_drift_detection_method
+
+
+General Concept Drift (recommended background reading)
+
+Gama et al. (2014)
+A Survey on Concept Drift Adaptation
+ACM Computing Surveys
+https://www.researchgate.net/publication/261961254_A_Survey_on_Concept_Drift_Adaptation
